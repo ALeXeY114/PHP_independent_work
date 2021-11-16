@@ -47,6 +47,30 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        
+
+                                        <?php
+
+                                            $pdo = new PDO('mysql:host=127.0.0.1; dbname=admins; charset=utf8;' , 'mysql', 'mysql');
+                                            $sql =  "SELECT * FROM admin";
+                                            $statimen = $pdo -> query ($sql);
+                                            $admin = ($statimen->fetchAll());
+
+                                        ?>
+
+                                        <?php foreach($admin as $person):?>
+                                            <tr>
+                                            <th scope="row"><?php echo $person['id'];?></th>
+                                            <td><?php echo $person['firstName'];?></td>
+                                            <td><?php echo $person['lastName'];?></td>
+                                            <td><?php echo $person['username'];?></td>
+                                            <td>
+                                                <a href="show.php?id=<?php echo $person['id'];?>" class="btn btn-info">Редактировать</a>
+                                                <a href="edit.php?id=<?php echo $person['id'];?>" class="btn btn-warning">Изменить</a>
+                                                <a href="delete.php?id=<?php echo $person['id'];?>" class="btn btn-danger">Удалить</a>
+                                            </td>
+                                        <?php endforeach;?>
+
                                         <tr>
                                             <th scope="row">1</th>
                                             <td>Mark</td>
@@ -58,6 +82,9 @@
                                                 <a href="delete.php?id=" class="btn btn-danger">Удалить</a>
                                             </td>
                                         </tr>
+
+
+
                                         <tr>
                                             <th scope="row">2</th>
                                             <td>Jacob</td>
@@ -91,6 +118,9 @@
                                                 <a href="delete.php?id=" class="btn btn-danger">Удалить</a>
                                             </td>
                                         </tr>
+
+
+
                                     </tbody>
                                 </table>
                             </div>
