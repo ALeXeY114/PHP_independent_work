@@ -71,7 +71,7 @@
                                             </td>
                                         <?php endforeach;?>
 
-                                        <tr>
+                                        <!-- <tr>
                                             <th scope="row">1</th>
                                             <td>Mark</td>
                                             <td>Otto</td>
@@ -117,7 +117,7 @@
                                                 <a href="edit.php?id=" class="btn btn-warning">Изменить</a>
                                                 <a href="delete.php?id=" class="btn btn-danger">Удалить</a>
                                             </td>
-                                        </tr>
+                                        </tr> -->
 
 
 
