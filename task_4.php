@@ -34,12 +34,7 @@
                         <div class="panel-content">
 
                             <?php
-
-                                // $classesTitles = ['d-flex mt-2', 'd-flex', 'd-flex', ,'d-flex'];
-                                // $titles = ['My Tasks','Transfered','Bugs Squashed','User Testing'];
-                                // $classesProgress = ['progress-bar bg-fusion-400','progress-bar bg-success-500','progress-bar bg-info-400','progress-bar bg-primary-300'];
-                                // $style = ['65','34','77','84'];
-
+                            
                                 $progressBar = [
                                     ['classTitle'=>'d-flex mt-2', 'title'=>'My Tasks', 'progressTitle'=>'130 / 500', 'classesProgress'=>'progress-bar bg-fusion-400','style'=>'65' ],
                                     ['classTitle'=>'d-flex', 'title'=>'Transfered','progressTitle'=>'440 TB','classesProgress'=>'progress-bar bg-success-500','style'=>'34'],

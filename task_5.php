@@ -33,7 +33,33 @@
                     <div class="panel-container show">
                         <div class="panel-content">
                            <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
-                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
+
+                            <?php
+                                $people = [
+                                    ['img'=>'img/demo/authors/sunny.png', 'nameImg'=>'Sunny A. (UI/UX Expert)', 'name'=>'Sunny A. (UI/UX Expert)', 'prof'=>'Lead Author','socialLink'=>'https://twitter.com/@myplaneticket','socialName'=>'@myplaneticket', 'wrapbootstrap'=>'https://wrapbootstrap.com/user/myorange', 'wrapTitle'=>'Contact Sunny'],
+                                    ['img'=>'img/demo/authors/josh.png', 'nameImg'=>'Jos K.', 'name'=>'Jos K. (ASP.NET Developer)', 'prof'=>'Partner &amp; Contributor','socialLink'=>'https://twitter.com/@atlantez','socialName'=>'@atlantez', 'wrapbootstrap'=>'https://wrapbootstrap.com/user/myorange', 'wrapTitle'=>'Contact Jos'],
+                                    ['img'=>'img/demo/authors/jovanni.png', 'nameImg'=>'Jovanni Lo', 'name'=>'Jovanni L. (PHP Developer)', 'prof'=>'Partner &amp; Contributor','socialLink'=>'https://twitter.com/@lodev09','socialName'=>'@lodev09', 'wrapbootstrap'=>'https://wrapbootstrap.com/user/lodev09', 'wrapTitle'=>'Contact Jovanni'],
+                                    ['img'=>'img/demo/authors/roberto.png', 'nameImg'=>'Roberto R', 'name'=>'Roberto R. (Rails Developer)', 'prof'=>'Partner &amp; Contributor','socialLink'=>'https://twitter.com/@sildur','socialName'=>'@sildur', 'wrapbootstrap'=>'https://wrapbootstrap.com/user/sildur', 'wrapTitle'=>'Contact Roberto'],
+                                ]
+                            ?>
+                                    <?php foreach($people as $value): ?>
+                                        <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
+                                            <img src="<?php echo $value['img'];?>" alt="<?php echo $value['nameImg'];?>" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
+                                            <div class="ml-2 mr-3">
+                                                <h5 class="m-0">
+                                                <?php echo $value['name'];?>
+                                                    <small class="m-0 fw-300">
+                                                    <?php echo $value['prof'];?>
+                                                    </small>
+                                                </h5>
+                                                <a href="<?php echo $value['socialLink'];?>" class="text-info fs-sm" target="_blank"><?php echo $value['socialName'];?></a> -
+                                                <a href="<?php echo $value['wrapbootstrap'];?>" class="text-info fs-sm" target="_blank" title="<?php echo $value['wrapTitle'];?>"><i class="fal fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                    <?php endforeach;?>
+
+                            <!-- <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
+
                                 <img src="img/demo/authors/sunny.png" alt="Sunny A." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                 <div class="ml-2 mr-3">
                                     <h5 class="m-0">
@@ -46,6 +72,7 @@
                                     <a href="https://wrapbootstrap.com/user/myorange" class="text-info fs-sm" target="_blank" title="Contact Sunny"><i class="fal fa-envelope"></i></a>
                                 </div>
                             </div>
+
                             <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
                                 <img src="img/demo/authors/josh.png" alt="Jos K." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                 <div class="ml-2 mr-3">
@@ -59,6 +86,7 @@
                                     <a href="https://wrapbootstrap.com/user/Walapa" class="text-info fs-sm" target="_blank" title="Contact Jos"><i class="fal fa-envelope"></i></a>
                                 </div>
                             </div>
+
                             <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
                                 <img src="img/demo/authors/jovanni.png" alt="Jovanni Lo" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                 <div class="ml-2 mr-3">
@@ -84,7 +112,11 @@
                                     <a href="https://twitter.com/@sildur" class="text-info fs-sm" target="_blank">@sildur</a> -
                                     <a href="https://wrapbootstrap.com/user/sildur" class="text-info fs-sm" target="_blank" title="Contact Roberto"><i class="fal fa-envelope"></i></a>
                                 </div>
-                            </div>
+                            </div> -->
+
+
+
+
                         </div>
                         </div>
                     </div>
