@@ -33,7 +33,33 @@
                     <div class="panel-container show">
                         <div class="panel-content">
                            <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
-                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
+
+                            <?php
+
+                                $pdo = new PDO('mysql:host=127.0.0.1; dbname=date; charset=utf8;' , 'mysql', 'mysql');
+                                $sql =  "SELECT * FROM people";
+                                $statimen = $pdo -> query ($sql);
+                                $people = ($statimen->fetchAll());
+
+                            ?>
+                                    <?php foreach($people as $value): ?>
+                                        <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0 <?php echo $value['blocking'];?>">
+                                            <img src="<?php echo $value['img'];?>" alt="<?php echo $value['nameImg'];?>" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
+                                            <div class="ml-2 mr-3">
+                                                <h5 class="m-0">
+                                                <?php echo $value['name'];?>
+                                                    <small class="m-0 fw-300">
+                                                    <?php echo $value['prof'];?>
+                                                    </small>
+                                                </h5>
+                                                <a href="<?php echo $value['socialLink'];?>" class="text-info fs-sm" target="_blank"><?php echo $value['socialName'];?></a> -
+                                                <a href="<?php echo $value['wrapbootstrap'];?>" class="text-info fs-sm" target="_blank" title="<?php echo $value['wrapTitle'];?>"><i class="fal fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                    <?php endforeach;?>
+
+
+                            <!-- <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
                                 <img src="img/demo/authors/sunny.png" alt="Sunny A." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                 <div class="ml-2 mr-3">
                                     <h5 class="m-0">
@@ -84,7 +110,9 @@
                                     <a href="https://twitter.com/@sildur" class="text-info fs-sm" target="_blank">@sildur</a> -
                                     <a href="https://wrapbootstrap.com/user/sildur" class="text-info fs-sm" target="_blank" title="Contact Roberto"><i class="fal fa-envelope"></i></a>
                                 </div>
-                            </div>
+                            </div> -->
+
+
                         </div>
                         </div>
                     </div>
